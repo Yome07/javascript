@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>calculatrice</title>
+    <style>
+        .masquer {
+            display: none;
+        }
+
+        .decoInfo {
+            text-align: center;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p onclick="toggleCalc();">
+        <a href="#"><span id="afficher" class="masquer">Afficher</span><span id="masquer">Masquer</span> la calculatrice</a></p>
+    </p>
+    <form action="" method="" onsubmit="return calcul();">
+        <input type="text" name="" id="nombre1" onmouseover="afficheInfoNombre();" onmouseout="efface();">
+        <select name="" id="operation" onmouseover="afficheInfoOperation();" onmouseout="efface();">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="" id="nombre2" onmouseover="afficheInfoNombre();" onmouseout="efface();">
+        <input type="submit" value="calculer">
+        <input type="reset" value="effacer" onclick="effaceResultat();">
+    </form>
+    <p id="afficheInfo"></p>
+    <p id="resultat"></p>
+    <script src="calculatrice.js"></script>
+</body>
+</html>

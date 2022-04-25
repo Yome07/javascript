@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie  </title>
+    <style>
+         #container {
+             display: flex;
+             flex-wrap: nowrap;
+         }
+        #thumbs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .thumb img {
+            width: 150px;
+            height: 150px;
+            margin: 0 5px;
+        }
+
+        #image {
+            width: 500px;
+        }
+        #image img {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Galerie</h1>
+        <div id="container">
+            <div>
+                <div id="image"></div>
+                <div id="altImage"></div>
+            </div>
+            <div id="thumbs">
+                <div class="thumb" id="thumb1"><img src="images/Mercury_in_color_-_Prockter07_centered.jpg" alt="Mercure"></div>
+                <div class="thumb" id="thumb2"><img src="images/Venus_globe.jpg" alt="Venus"></div>
+                <div class="thumb" id="thumb3"><img src="images/Earth_by_the_EPIC_Team_on_21_April_2018.png" alt="La Terre"></div>
+                <div class="thumb" id="thumb31"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1080px-FullMoon2010.jpg" alt="La lune" class="src"></div>
+                <div class="thumb" id="thumb4"><img src="images/Mars_Valles_Marineris_EDIT.jpg" alt="Mars"></div>
+                <div class="thumb" id="thumb5"><img src="images/Jupiter.jpg" alt="Jupiter"></div>
+                <div class="thumb" id="thumb6"><img src="images/1920px-Saturn_during_Equinox.jpg" alt="Saturne"></div>
+                <div class="thumb" id="thumb7"><img src="images/Uranus2.jpg" alt="Uranus"></div>
+                <div class="thumb" id="thumb8"><img src="images/Neptune.jpg" alt="Neptune"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function afficheImage() {
+            document.querySelector("#image").innerHTML = this.innerHTML;
+            document.querySelector("#altImage").innerHTML = this.childNodes[0].alt;
+        }
+
+        let thumbs = document.querySelectorAll(".thumb")
+        thumbs.forEach(element => {
+            element.addEventListener("click", afficheImage)
+        });
+    </script>
+</body>
+</html>

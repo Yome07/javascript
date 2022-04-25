@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculer une TVA</title>
+    <link rel="stylesheet" href="calculTVA.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculer une TVA</h1>
+        <div class="input">
+            <div>
+                <label for="HT">Montant hors taxes</label>
+                <input type="text" name="HT" id="HT">
+            </div>
+            <p>+</p>
+            <div>
+                <label for="TVA">Montant TVA</label>
+                <input type="text" name="TVA" id="TVA">
+            </div>
+            <p>=</p>
+            <div>
+                <label for="TTC">Montant TTC</label>
+                <input type="text" name="TTC" id="TTC">
+            </div>
+        </div>
+        <div class="tva">
+            <label for="TauxTVA">Taux TVA</label>
+            <input type="text" name="TauxTVA" id="TauxTVA" disabled>
+        </div>
+        <div class="listeTva">
+            <button class="taux">20 %</button>
+            <button class="taux">10 %</button>
+            <button class="taux">8.5 %</button>
+            <button class="taux">7 %</button>
+            <button class="taux">5.5 %</button>
+            <button class="taux">19.6 %</button>
+        </div>
+        <div id="resume">
+            <p id="resumeHT">Montant hors taxes : <span></span></p>
+            <p id="resumeTVA">Montant TVA : <span class="montantTVA"></span> avec un taux égal à <span class="tauxTVA"></span></p>
+            <p id="resumeTTC">Montant TTC : <span></span></p>
+        </div>
+    </div>
+    <script src="calculTVA.js"></script>
+</body>
+</html>
